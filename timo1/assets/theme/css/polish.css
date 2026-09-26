@@ -1,0 +1,43 @@
+/* Consistent vertical rhythm */
+.mbr-section, section { padding-top: 5rem; padding-bottom: 5rem; }
+@media (max-width: 768px) {
+  .mbr-section, section { padding-top: 3rem; padding-bottom: 3rem; }
+}
+
+/* Hero */
+#header14-1f {
+  min-height: 90vh;
+  background: linear-gradient(135deg, #0b3d91 0%, #062a5e 60%, #00b8a9 100%) !important;
+}
+#header14-1f .mbr-section-title { color: #fff !important; }
+#header14-1f .mbr-text { color: rgba(255,255,255,.85) !important; }
+
+/* Section titles: tighter, bolder, more modern */
+.mbr-section-title { letter-spacing: -0.02em; line-height: 1.15; font-weight: 800; }
+
+/* Services / Sectors images */
+.item-img img, .features-image img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Gallery slider images */
+.slider-image img {
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* Client logos */
+.clients1 .card img {
+  filter: grayscale(1) opacity(.7);
+  transition: filter .25s ease, transform .25s ease;
+}
+.clients1 .card img:hover {
+  filter: grayscale(0) opacity(1);
+  transform: scale(1.05);
+}
+
+/* Scroll-to-top button repositioned */
+.scrollToTop { bottom: 20px !important; right: 20px !important; }

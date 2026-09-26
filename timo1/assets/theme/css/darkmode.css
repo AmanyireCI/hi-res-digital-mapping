@@ -1,0 +1,160 @@
+/* ============ THEME TOKENS ============ */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f6f8fb;
+  --bg-elevated: #ffffff;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: #e2e8f0;
+  --brand: #0B3D91;
+  --accent: #00B8A9;
+  --accent-hover: #00A192;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+  --shadow-md: 0 4px 16px rgba(15,23,42,.08);
+  --shadow-lg: 0 12px 32px rgba(15,23,42,.12);
+  --radius: 12px;
+  --transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+}
+
+[data-theme="dark"] {
+  --bg: #0b0f17;
+  --bg-alt: #111827;
+  --bg-elevated: #1a2233;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+  --brand: #4F8FFF;
+  --accent: #2DD4BF;
+  --accent-hover: #5EEAD4;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.5);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,.6);
+}
+
+/* ============ APPLY GLOBALLY ============ */
+html, body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  transition: var(--transition);
+}
+
+section, .mbr-section {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  transition: var(--transition);
+}
+
+section:nth-of-type(even),
+.mbr-section:nth-of-type(even) {
+  background-color: var(--bg-alt) !important;
+}
+
+/* Overlays should become subtle in dark mode */
+[data-theme="dark"] .mbr-overlay {
+  background-color: rgba(0,0,0,.75) !important;
+}
+
+/* Text */
+h1,h2,h3,h4,h5,h6,.mbr-section-title,.mbr-fonts-style {
+  color: var(--text) !important;
+}
+p, .mbr-text, .mbr-section-subtitle {
+  color: var(--text-muted) !important;
+}
+
+/* Links */
+a { color: var(--accent); transition: color .2s ease; }
+a:hover { color: var(--accent-hover); }
+
+/* Cards / Services / Sectors */
+.item-wrapper, .plan, .card, .features-image .item-wrapper {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease, var(--transition);
+}
+.item-wrapper:hover, .plan:hover, .features-image .item-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Navbar */
+.navbar, .navbar-dropdown {
+  background: color-mix(in srgb, var(--bg) 92%, transparent) !important;
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.navbar .navbar-caption, .navbar .nav-link {
+  color: var(--text) !important;
+}
+.navbar .nav-link:hover { color: var(--accent) !important; }
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #06241f !important;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform .15s ease, background .2s ease;
+}
+.btn-primary:hover {
+  background: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  transform: translateY(-1px);
+}
+.btn-success {
+  background: transparent !important;
+  border: 1.5px solid var(--accent) !important;
+  color: var(--accent) !important;
+  border-radius: 8px;
+}
+.btn-success:hover {
+  background: var(--accent) !important;
+  color: #06241f !important;
+}
+.btn-black {
+  background: var(--brand) !important;
+  color: #fff !important;
+  border-radius: 8px;
+}
+
+/* Inputs */
+.form-control {
+  background: var(--bg-elevated) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px;
+}
+.form-control::placeholder { color: var(--text-muted); }
+
+/* Footer */
+.footer6, footer {
+  background: var(--bg-alt) !important;
+  border-top: 1px solid var(--border);
+}
+
+/* ============ TOGGLE BUTTON ============ */
+#theme-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 90px; /* above scroll-to-top */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 1050;
+  transition: transform .2s ease, var(--transition);
+}
+#theme-toggle:hover { transform: scale(1.08); }
+#theme-toggle svg { width: 20px; height: 20px; stroke: var(--text); }
+#theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] #theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] #theme-toggle .icon-moon { display: none; }
