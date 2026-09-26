@@ -1,43 +1,134 @@
-/* Consistent vertical rhythm */
-.mbr-section, section { padding-top: 5rem; padding-bottom: 5rem; }
-@media (max-width: 768px) {
-  .mbr-section, section { padding-top: 3rem; padding-bottom: 3rem; }
+/* ==========================================
+   HI-RES DIGITAL MAPPING — LAYOUT POLISH
+   Loaded AFTER darkmode.css
+   ========================================== */
+
+/* ---------- VERTICAL RHYTHM ----------
+   Apply generous padding to content sections only.
+   Exclude navbar, hero, and fullscreen sections so they don't break. */
+section.mbr-section:not(.menu):not(.mbr-fullscreen):not(#header14-1f),
+.mbr-section:not(.menu):not(.mbr-fullscreen):not(#header14-1f) {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-/* Hero */
+@media (max-width: 768px) {
+  section.mbr-section:not(.menu):not(.mbr-fullscreen):not(#header14-1f),
+  .mbr-section:not(.menu):not(.mbr-fullscreen):not(#header14-1f) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* ---------- HERO ---------- */
 #header14-1f {
   min-height: 90vh;
   background: linear-gradient(135deg, #0b3d91 0%, #062a5e 60%, #00b8a9 100%) !important;
+  padding: 6rem 0 !important;
 }
-#header14-1f .mbr-section-title { color: #fff !important; }
-#header14-1f .mbr-text { color: rgba(255,255,255,.85) !important; }
 
-/* Section titles: tighter, bolder, more modern */
-.mbr-section-title { letter-spacing: -0.02em; line-height: 1.15; font-weight: 800; }
+#header14-1f .mbr-section-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
 
-/* Services / Sectors images */
-.item-img img, .features-image img {
+#header14-1f .mbr-text {
+  color: rgba(255,255,255,.9) !important;
+  letter-spacing: 0.15em;
+  font-size: .95rem;
+  font-weight: 500;
+}
+
+/* Hero image: soften edges */
+#header14-1f .image-wrapper img {
+  border-radius: var(--radius, 12px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+/* ---------- ABOUT US SECTION ---------- */
+#header14-1j .mbr-section-title {
+  color: var(--text) !important;
+}
+
+/* ---------- SECTION TITLES ---------- */
+.mbr-section-title {
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.mbr-section-subtitle {
+  opacity: 0.85;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- SERVICES / SECTORS IMAGES ---------- */
+.item-img img,
+.features-image img {
   aspect-ratio: 4/3;
   object-fit: cover;
   width: 100%;
+  display: block;
 }
 
-/* Gallery slider images */
+/* ---------- GALLERY SLIDER IMAGES ---------- */
 .slider-image img {
   aspect-ratio: 16/10;
   object-fit: cover;
-  border-radius: var(--radius);
+  border-radius: var(--radius, 12px);
 }
 
-/* Client logos */
+/* ---------- PROJECT GALLERY ---------- */
+.gallery4 .item-wrapper img,
+.mbr-gallery .item-wrapper img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.gallery4 .item-wrapper:hover img,
+.mbr-gallery .item-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* ---------- CLIENT LOGOS ---------- */
 .clients1 .card img {
   filter: grayscale(1) opacity(.7);
   transition: filter .25s ease, transform .25s ease;
+  object-fit: contain;
+  width: 100%;
 }
+
 .clients1 .card img:hover {
   filter: grayscale(0) opacity(1);
   transform: scale(1.05);
 }
 
-/* Scroll-to-top button repositioned */
-.scrollToTop { bottom: 20px !important; right: 20px !important; }
+/* ---------- SCROLL-TO-TOP BUTTON ---------- */
+.scrollToTop {
+  bottom: 20px !important;
+  right: 20px !important;
+}
+
+/* ---------- THEME TOGGLE: keep above scroll-to-top ---------- */
+#theme-toggle {
+  bottom: 90px !important;
+}
+
+/* ---------- RESPONSIVE TWEAKS ---------- */
+@media (max-width: 768px) {
+  #header14-1f {
+    min-height: auto;
+    padding: 5rem 0 3rem !important;
+  }
+
+  #header14-1f .mbr-section-title {
+    font-size: 1.8rem;
+  }
+
+  .mbr-section-title {
+    font-size: 1.6rem;
+  }
+}

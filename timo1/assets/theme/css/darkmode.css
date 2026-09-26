@@ -1,4 +1,8 @@
-/* ============ THEME TOKENS ============ */
+/* ==========================================
+   HI-RES DIGITAL MAPPING — DARK MODE
+   ========================================== */
+
+/* ---------- THEME TOKENS ---------- */
 :root {
   --bg: #ffffff;
   --bg-alt: #f6f8fb;
@@ -31,43 +35,64 @@
   --shadow-lg: 0 12px 32px rgba(0,0,0,.6);
 }
 
-/* ============ APPLY GLOBALLY ============ */
+/* ---------- BASE ---------- */
 html, body {
   background-color: var(--bg) !important;
   color: var(--text) !important;
   transition: var(--transition);
 }
 
+body {
+  background-color: var(--bg) !important;
+}
+
+/* Sections: default background */
 section, .mbr-section {
   background-color: var(--bg) !important;
   color: var(--text) !important;
   transition: var(--transition);
 }
 
-section:nth-of-type(even),
-.mbr-section:nth-of-type(even) {
+/* ---------- SPECIFIC SECTION BACKGROUNDS (not nth-of-type) ---------- */
+/* Gallery title strip + Services + Contacts alternate */
+#content10-22,
+#gallery2-6,
+#content4-1q,
+#form3-b,
+#clients1-1u {
   background-color: var(--bg-alt) !important;
 }
 
-/* Overlays should become subtle in dark mode */
-[data-theme="dark"] .mbr-overlay {
-  background-color: rgba(0,0,0,.75) !important;
+/* Dark hero for "About Us" section */
+#header14-1j {
+  background-color: var(--bg-alt) !important;
 }
 
-/* Text */
-h1,h2,h3,h4,h5,h6,.mbr-section-title,.mbr-fonts-style {
+/* ---------- OVERLAYS (dark theme only) ---------- */
+[data-theme="dark"] .mbr-overlay {
+  background-color: rgba(0,0,0,.6) !important;
+  opacity: 1 !important;
+}
+
+/* ---------- TEXT ---------- */
+h1, h2, h3, h4, h5, h6,
+.mbr-section-title,
+.mbr-fonts-style {
   color: var(--text) !important;
 }
+
 p, .mbr-text, .mbr-section-subtitle {
   color: var(--text-muted) !important;
 }
 
-/* Links */
+/* ---------- LINKS ---------- */
 a { color: var(--accent); transition: color .2s ease; }
 a:hover { color: var(--accent-hover); }
 
-/* Cards / Services / Sectors */
-.item-wrapper, .plan, .card, .features-image .item-wrapper {
+/* ---------- CARDS / SERVICES / SECTORS ---------- */
+.item-wrapper,
+.plan,
+.features-image .item-wrapper {
   background: var(--bg-elevated) !important;
   border: 1px solid var(--border) !important;
   border-radius: var(--radius) !important;
@@ -75,23 +100,32 @@ a:hover { color: var(--accent-hover); }
   overflow: hidden;
   transition: transform .25s ease, box-shadow .25s ease, var(--transition);
 }
-.item-wrapper:hover, .plan:hover, .features-image .item-wrapper:hover {
+
+.item-wrapper:hover,
+.plan:hover,
+.features-image .item-wrapper:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
 
-/* Navbar */
+/* ---------- NAVBAR — keep white text in BOTH themes (it sits over a dark bar) ---------- */
 .navbar, .navbar-dropdown {
   background: color-mix(in srgb, var(--bg) 92%, transparent) !important;
   backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--border);
 }
-.navbar .navbar-caption, .navbar .nav-link {
+
+/* In LIGHT mode: navbar sits over hero → keep its text dark since bg is now white */
+.navbar .navbar-caption,
+.navbar .nav-link {
   color: var(--text) !important;
 }
-.navbar .nav-link:hover { color: var(--accent) !important; }
 
-/* Buttons */
+.navbar .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* ---------- BUTTONS ---------- */
 .btn-primary {
   background: var(--accent) !important;
   border-color: var(--accent) !important;
@@ -105,6 +139,7 @@ a:hover { color: var(--accent-hover); }
   border-color: var(--accent-hover) !important;
   transform: translateY(-1px);
 }
+
 .btn-success {
   background: transparent !important;
   border: 1.5px solid var(--accent) !important;
@@ -115,13 +150,14 @@ a:hover { color: var(--accent-hover); }
   background: var(--accent) !important;
   color: #06241f !important;
 }
+
 .btn-black {
   background: var(--brand) !important;
-  color: #fff !important;
+  color: #ffffff !important;
   border-radius: 8px;
 }
 
-/* Inputs */
+/* ---------- FORMS ---------- */
 .form-control {
   background: var(--bg-elevated) !important;
   color: var(--text) !important;
@@ -130,17 +166,17 @@ a:hover { color: var(--accent-hover); }
 }
 .form-control::placeholder { color: var(--text-muted); }
 
-/* Footer */
+/* ---------- FOOTER ---------- */
 .footer6, footer {
   background: var(--bg-alt) !important;
   border-top: 1px solid var(--border);
 }
 
-/* ============ TOGGLE BUTTON ============ */
+/* ---------- THEME TOGGLE BUTTON ---------- */
 #theme-toggle {
   position: fixed;
   right: 20px;
-  bottom: 90px; /* above scroll-to-top */
+  bottom: 90px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -154,7 +190,14 @@ a:hover { color: var(--accent-hover); }
   transition: transform .2s ease, var(--transition);
 }
 #theme-toggle:hover { transform: scale(1.08); }
-#theme-toggle svg { width: 20px; height: 20px; stroke: var(--text); }
+
+#theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text);
+  fill: none;
+}
+
 #theme-toggle .icon-sun { display: none; }
 [data-theme="dark"] #theme-toggle .icon-sun { display: block; }
 [data-theme="dark"] #theme-toggle .icon-moon { display: none; }

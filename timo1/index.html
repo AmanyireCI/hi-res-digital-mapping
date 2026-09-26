@@ -1,16 +1,5 @@
 <!DOCTYPE html>
-<html  >
-
-<script>
-(function() {
-  try {
-    const stored = localStorage.getItem('theme');
-    const sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', stored || sys);
-  } catch(e) {}
-})();
-</script>
-
+<html>
 <head>
   <!-- Site made with Mobirise Website Builder v6.1.12, https://mobirise.com -->
   <meta charset="UTF-8">
@@ -18,10 +7,9 @@
   <meta name="generator" content="Mobirise v6.1.12, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/log-2-131x96.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
+  <meta name="description" content="Hi-Res Digital Mapping — Drone surveys, aerial mapping, thermal & topographic inspection across Uganda and East Africa.">
   <title>Home</title>
+
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/parallax/jarallax.css">
@@ -31,41 +19,29 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=lsnZoI"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=lsnZoI" type="text/css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=lsnZoI">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=lsnZoI" type="text/css">
 
- 
+  <!-- ✅ YOUR CUSTOM STYLES — must come AFTER Mobirise CSS -->
+  <link rel="stylesheet" href="assets/theme/css/darkmode.css">
+  <link rel="stylesheet" href="assets/theme/css/polish.css">
+
+  <!-- ✅ THEME INIT — runs before body renders, no flash -->
+  <script>
+  (function() {
+    try {
+      const stored = localStorage.getItem('theme');
+      const sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', stored || sys);
+    } catch(e) {}
+  })();
+  </script>
 </head>
 
-<button id="theme-toggle" aria-label="Toggle light and dark mode">
-  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-  </svg>
-  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="4"/>
-    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-  </svg>
-</button>
-
-<script>
-document.getElementById('theme-toggle').addEventListener('click', () => {
-  const html = document.documentElement;
-  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-});
-
-// React to system changes if user hasn't chosen
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-  if (!localStorage.getItem('theme')) {
-    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-  }
-});
-</script>
-
 <body>
-  
+
   <section data-bs-version="5.1" class="menu menu2 cid-sFCw1qGFAI" once="menu" id="menu2-23">
-    
+
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container">
             <div class="navbar-brand">
@@ -89,7 +65,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#header14-1j">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#content4-1q">Services</a>
                     </li><li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#team1-1o">Projects</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#contacts2-1r">Contacts</a></li></ul>
-                
+
                 <div class="navbar-buttons mbr-section-btn"><a class="btn btn-success display-4" href="https://mobiri.se">+256 701 560211</a></div>
             </div>
         </div>
@@ -98,7 +74,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 
 <section data-bs-version="5.1" class="header14 cid-sFzxmVl7J6 mbr-fullscreen mbr-parallax-background" id="header14-1f">
 
-    
+
 
     <div class="mbr-overlay" style="opacity: 0; background-color: rgb(187, 187, 187);"></div>
 
@@ -122,7 +98,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 
 <section data-bs-version="5.1" class="header14 cid-sFzz5E692j mbr-parallax-background" id="header14-1j">
 
-    
+
 
     <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(35, 35, 35);"></div>
 
@@ -146,12 +122,12 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 </section>
 
 <section data-bs-version="5.1" class="content10 cid-sFAZRnJnnI" id="content10-22">
-    
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md">
-                
-                
+
+
             </div>
             <div class="col-md-12 col-lg-7">
                 <p class="mbr-text mbr-fonts-style display-1"><strong>Gallery</strong></p>
@@ -161,9 +137,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 </section>
 
 <section data-bs-version="5.1" class="slider2 cid-vnguqdCMbP" id="slider2-7">
-    
 
-    
+
+
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-12">
@@ -176,119 +152,119 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="carousel-inner">
                         <div class="carousel-item slider-image item active">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/gal1-1044x783.jpg" alt="Mobirise Website Builder" data-slide-to="0" data-bs-slide-to="0">
-                                
+
                             </div>
                         </div>
-                        
+
                         <div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/gal2-1044x783.jpg" alt="Mobirise Website Builder" data-slide-to="1" data-bs-slide-to="1">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/gal4-683x911.jpg" alt="Mobirise Website Builder" data-slide-to="2" data-bs-slide-to="2">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/gal3-600x450.jpg" alt="Mobirise Website Builder" data-slide-to="3" data-bs-slide-to="3">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2020at2010.47.0720am201-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="4" data-bs-slide-to="4">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/gal5-600x400.jpg" alt="Mobirise Website Builder" data-slide-to="5" data-bs-slide-to="5">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/dr4-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="6" data-bs-slide-to="6">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2420at2012.33.4520am-600x839.jpg" alt="Mobirise Website Builder" data-slide-to="7" data-bs-slide-to="7">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/gal6-600x450.jpg" alt="Mobirise Website Builder" data-slide-to="8" data-bs-slide-to="8">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2020at2010.47.0720am-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/dr2-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="10" data-bs-slide-to="10">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2220at209.58.3820pm-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="11" data-bs-slide-to="11">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2220at209.59.1720pm-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="12" data-bs-slide-to="12">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/dr3-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="13" data-bs-slide-to="13">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2220at2010.00.0220pm-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="14" data-bs-slide-to="14">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2220at2010.01.3420pm-600x450.jpg" alt="Mobirise Website Builder" data-slide-to="15" data-bs-slide-to="15">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2220at209.58.2320pm-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="16" data-bs-slide-to="16">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2220at209.57.5220pm-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="17" data-bs-slide-to="17">
-                                
+
                             </div>
                         </div><div class="carousel-item slider-image item">
                             <div class="item-wrapper">
-                                
+
                                 <img class="d-block w-100" src="assets/images/whatsapp20image202026-06-2020at2010.48.0620am-600x800.jpg" alt="Mobirise Website Builder" data-slide-to="18" data-bs-slide-to="18">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -307,12 +283,12 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 </section>
 
 <section data-bs-version="5.1" class="gallery2 cid-vngrb7mZpH" id="gallery2-6">
-    
+
     <div class="mbr-overlay"></div>
     <div class="container-fluid">
         <div class="mbr-section-head">
             <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1"><strong>Our Services</strong><br><br></h4>
-            
+
         </div>
         <div class="row mt-4">
             <div class="item features-image col-12 col-md-6 col-lg-3">
@@ -322,10 +298,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>Topographic Survey</strong><br>High-resolution terrain mapping for accurate land analysis and planning.<br><br></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-lg-3">
@@ -336,10 +312,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>Magnetic Survey
 </strong><div>Non-invasive detection of underground structures and materials.</div></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-lg-3">
@@ -350,10 +326,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>Gas Detection Survey
 </strong><div>Identify gas leaks or emissions safely with precision drone sensors.</div></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-lg-3">
@@ -364,10 +340,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>Bathymetric Survey
 </strong><div>Map water bodies’ depth profiles for marine and civil projects.</div></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div><div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
@@ -377,10 +353,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>Consultancy
 </strong><div>Professional guidance on drone strategy, compliance, and operations.</div></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div><div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
@@ -390,10 +366,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>Traffic Studies
 </strong><div>Analyze flow, congestion, and safety using aerial traffic data.</div></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div><div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
@@ -403,10 +379,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>AI &amp; ML Integration
 </strong><div>Leverage intelligent automation for decision-making and data analysis.</div></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div><div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
@@ -416,10 +392,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>Thermal Inspection
 </strong><div>Detect heat anomalies in equipment, buildings, or pipelines.</div></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div><div class="item features-image col-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
@@ -429,10 +405,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7"><strong>Surveillance
 </strong><div>Real-time monitoring for security, events, wildlife, and more.</div></h5>
-                        
-                        
+
+
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -440,7 +416,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 </section>
 
 <section data-bs-version="5.1" class="features4 cid-vngr4hYufD" id="features4-5">
-    
+
     <div class="mbr-overlay"></div>
     <div class="container">
         <div class="mbr-section-head">
@@ -456,10 +432,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5"><strong>Agriculture</strong></h5>
-                        
+
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">Crop monitoring, irrigation mapping, and precision agriculture powered by aerial intelligence.</p>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-lg-4">
@@ -469,10 +445,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5"><strong>Security &amp; Defence</strong></h5>
-                        
+
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">Real-time situational awareness, surveillance, and rapid deployment support for tactical operations.</p>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="item features-image col-12 col-md-6 col-lg-4">
@@ -482,10 +458,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5"><strong>Engineering &amp; Construction</strong></h5>
-                        
+
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">Site analysis, structural monitoring, and progress tracking with centimeter-level accuracy.<br></p>
                     </div>
-                    
+
                 </div>
             </div><div class="item features-image col-12 col-md-6 col-lg-4">
                 <div class="item-wrapper">
@@ -494,10 +470,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5"><strong>Researchers</strong></h5>
-                        
+
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">We assist researchers with aerial data for surveys and field studies.<br></p>
                     </div>
-                    
+
                 </div>
             </div><div class="item features-image col-12 col-md-6 col-lg-4">
                 <div class="item-wrapper">
@@ -506,10 +482,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5"><strong>Survey &amp; Infrastructure</strong></h5>
-                        
+
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">Accurate mapping, infrastructure inspection, and asset lifecycle management using drone data.<br></p>
                     </div>
-                    
+
                 </div>
             </div><div class="item features-image col-12 col-md-6 col-lg-4">
                 <div class="item-wrapper">
@@ -518,10 +494,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-5"><strong>Consultancy</strong></h5>
-                        
+
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">We support medical logistics and emergency access through drone operations.<br></p>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -530,9 +506,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 </section>
 
 <section data-bs-version="5.1" class="gallery4 mbr-gallery cid-vngLh2kSgy" id="gallery4-9">
-    
 
-    
+
+
     <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(35, 35, 35);">
     </div>
 
@@ -567,7 +543,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
                 </div>
-                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7"><strong>Aerial Mapping</strong><br>Optical fibel corridors DRC: 900km - 2024</h6>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7"><strong>Aerial Mapping</strong><br>Optical fiber corridors DRC: 900km - 2024</h6>
             </div>
             <div class="col-12 col-md-6 col-lg-4 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#vnKiJb7gJg-modal" data-bs-target="#vnKiJb7gJg-modal">
@@ -576,7 +552,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
                 </div>
-                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7"><strong>Topographic Survey</strong><br>Mwerasandu mine - 2023</h6>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7"><strong>Topographic Survey</strong><br>Mwerasandu Mine - 2023</h6>
             </div><div class="col-12 col-md-6 col-lg-4 item gallery-image">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#vnKiJb7gJg-modal" data-bs-target="#vnKiJb7gJg-modal">
                     <img class="w-100" src="assets/images/wakiso-595x400.jpg" alt="Mobirise Website Builder" data-slide-to="4" data-bs-slide-to="4" data-target="#lb-vnKiJb7gJg" data-bs-target="#lb-vnKiJb7gJg">
@@ -593,7 +569,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     </div>
                 </div>
                 <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7"><strong>Surveillance
-</strong><div>Wetland Lwera - 2022</div></h6>
+</strong><div>Lwera Wetland - 2022</div></h6>
             </div>
         </div>
 
@@ -645,7 +621,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 </section>
 
 <section data-bs-version="5.1" class="content4 cid-sFzIdnt1ra" id="content4-1q">
-    
+
     <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);">
     </div>
     <div class="container">
@@ -653,16 +629,16 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
             <div class="title col-md-12 col-lg-10">
                 <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Our Core Values</strong></h3>
                 <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">The below values are the principles that drive us forward, inspire us to be better, and unite us in our shared vision of a<div>world transformed by drone technology.</div></h4>
-                
+
             </div>
         </div>
     </div>
 </section>
 
 <section data-bs-version="5.1" class="pricing2 cid-sFzDdjoEIw mbr-parallax-background" id="pricing2-1k">
-    
 
-    
+
+
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 align-center col-lg-3">
@@ -680,7 +656,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                                 <li class="list-group-item"><br></li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -699,7 +675,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                                 <li class="list-group-item"><br></li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -718,7 +694,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                                 <li class="list-group-item"><br></li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -738,7 +714,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                                 <li class="list-group-item"><br></li>
                             </ul>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -748,16 +724,15 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 
 <section data-bs-version="5.1" class="contacts3 map1 cid-vngQwaZ9MR" id="contacts3-a">
 
-    
 
-    
+
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(255, 255, 255);"></div>
     <div class="container">
         <div class="mbr-section-head">
             <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
                 <strong>Contacts</strong>
             </h3>
-            
+
         </div>
         <div class="row justify-content-center mt-4">
             <div class="card col-12 col-md-6">
@@ -769,7 +744,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                         <h6 class="card-title mbr-fonts-style mb-1 display-5">
                             <strong>Phone</strong>
                         </h6>
-                        <p class="mbr-text mbr-fonts-style display-7"><strong>+257 0701 560211</strong></p>
+                        <p class="mbr-text mbr-fonts-style display-7"><strong>+256 701 560211</strong></p>
                     </div>
                 </div>
                 <div class="card-wrapper">
@@ -780,7 +755,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                         <h6 class="card-title mbr-fonts-style mb-1 display-5">
                             <strong>Email</strong>
                         </h6>
-                        <p class="mbr-text mbr-fonts-style display-7"><a href="mailto:info@site.com" class="text-primary">mutungitimothy22@gmail.com</a>
+                        <p class="mbr-text mbr-fonts-style display-7"><a href="mailto:mutungitimothy22@gmail.com" class="text-primary">mutungitimothy22@gmail.com</a>
                         </p>
                     </div>
                 </div>
@@ -794,9 +769,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 
 <section data-bs-version="5.1" class="form3 cid-vngRTLUVZQ" id="form3-b">
 
-    
 
-    
+
 
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -841,14 +815,14 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 </section>
 
 <section data-bs-version="5.1" class="clients1 cid-sFAw7z51L3" id="clients1-1u">
-    
+
     <div class="images-container container">
         <div class="mbr-section-head">
             <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
                 <strong>Our Clients</strong>
             </h3>
-            
-            
+
+
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-3 card">
@@ -881,7 +855,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
 
 <section data-bs-version="5.1" class="footer6 cid-vngVTVSOKE mbr-parallax-background" once="footers" id="footer6-c">
 
-    
+
 
     <div class="mbr-overlay" style="opacity: 0.9; background-color: rgb(35, 35, 35);"></div>
 
@@ -900,14 +874,6 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
                     Phone</strong>: +256 701 560211<br></p>
             </div>
             <div class="col-12 col-md-3 mbr-fonts-style display-7">
-                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
-                    <strong>Links</strong>
-                </h5>
-                <ul class="list mbr-fonts-style mb-4 display-4">
-                    <li class="mbr-text item-wrap">
-                        <a class="text-primary" href="http://1.com">Website Site Holder 1</a></li><li class="mbr-text item-wrap"><a class="text-primary" href="http://1.com" style="font-size: 1.1rem;">Website Site Holder 1</a></li>
-                    <li class="mbr-text item-wrap"><a class="text-primary" href="http://1.com">Website Site Holder&nbsp;</a></li>
-                </ul>
                 <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 mt-5 display-7">
                     <strong>Feedback</strong>
                 </h5>
@@ -929,10 +895,52 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
             </div>
         </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/1046934" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/builder/no-code-website-builder.html">No Code Website Builder</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>  
-  
-  
- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
-    <input name="animation" type="hidden">
-  </body>
+</section>
+
+<section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/1046934" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/builder/no-code-website-builder.html">No Code Website Builder</a></section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/parallax/jarallax.js"></script>
+<script src="assets/smoothscroll/smooth-scroll.js"></script>
+<script src="assets/ytplayer/index.js"></script>
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>
+<script src="assets/theme/js/script.js"></script>
+<script src="assets/formoid/formoid.min.js"></script>
+
+<div id="scrollToTop" class="scrollToTop mbr-arrow-up">
+  <a style="text-align: center;">
+    <i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i>
+  </a>
+</div>
+<input name="animation" type="hidden">
+
+<!-- ✅ THEME TOGGLE BUTTON — inside body now -->
+<button id="theme-toggle" aria-label="Toggle light and dark mode">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"/>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+  </svg>
+</button>
+
+<!-- ✅ THEME TOGGLE SCRIPT -->
+<script>
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
+// React to system changes if user hasn't chosen
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (!localStorage.getItem('theme')) {
+    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+  }
+});
+</script>
+
+</body>
 </html>
