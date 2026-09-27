@@ -319,3 +319,130 @@ section.mbr-section:not(.menu):not(.mbr-fullscreen):not(#header14-1f),
   .lightbox-close { top: 10px; right: 10px; width: 40px; height: 40px; }
   .lightbox-img { max-width: 94vw; max-height: 70vh; }
 }
+
+/* ==========================================
+   HERO — Animated gradient + floating image
+   ========================================== */
+#header14-1f {
+  min-height: 90vh;
+  padding: 6rem 0 !important;
+  background: linear-gradient(-45deg, #0b3d91, #062a5e, #00b8a9, #0B3D91) !important;
+  background-size: 400% 400% !important;
+  animation: heroGradient 18s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes heroGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Soft radial glow pulsing in the corner */
+#header14-1f::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(0, 184, 169, 0.35), transparent 70%);
+  pointer-events: none;
+  animation: heroGlow 8s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes heroGlow {
+  from { transform: translate(0, 0) scale(1); opacity: .6; }
+  to   { transform: translate(-20px, 30px) scale(1.15); opacity: 1; }
+}
+
+/* Make sure content sits above the glow */
+#header14-1f .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating hero image */
+#header14-1f .image-wrapper img {
+  border-radius: var(--radius, 12px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+/* Hero text */
+#header14-1f .mbr-section-title {
+  color: #ffffff !important;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+#header14-1f .mbr-text {
+  color: rgba(255, 255, 255, 0.9) !important;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ==========================================
+   NAVBAR — Shrink on scroll
+   ========================================== */
+.navbar {
+  transition: padding .3s ease, background .3s ease, box-shadow .3s ease;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .navbar-logo img {
+  transition: height .3s ease;
+}
+
+/* ==========================================
+   CLIENTS — Clean logo strip
+   ========================================== */
+.clients1 .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  row-gap: 2rem;
+}
+
+.clients1 .card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  flex: 0 0 auto;
+  width: auto !important;
+  max-width: 160px;
+  padding: 0 !important;
+}
+
+.clients1 .card img {
+  max-height: 70px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.65);
+  transition: filter .3s ease, transform .3s ease;
+}
+
+.clients1 .card img:hover {
+  filter: grayscale(0) opacity(1);
+  transform: scale(1.1);
+}
